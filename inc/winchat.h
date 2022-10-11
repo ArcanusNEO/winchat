@@ -36,7 +36,7 @@ void exec_chat(SOCKET sock) {
         send_buf[len]   = '\0';
         eol             = 0;
       }
-      strcat(send_buf, "==> time: ");
+      strcat(send_buf, "==> sent time: ");
       time_t t = time(NULL);
       strcat(send_buf, ctime(&t));
       printf("%s", send_buf + len);
