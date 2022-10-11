@@ -16,7 +16,7 @@ signed main(int argc, char* argv[]) {
                                   .sin_addr   = {.s_addr = inet_addr(ip_str)},
                                   .sin_port   = htons(port)};
   connect(clnt_sock, (SOCKADDR*) &sock_addr, sizeof(SOCKADDR));
-  puts("session established");
+  puts(conn_alert);
   exec_chat(clnt_sock);
 END:
   closesocket(clnt_sock);

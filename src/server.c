@@ -22,7 +22,7 @@ signed main(int argc, char* argv[]) {
   while (clnt_sock = accept(serv_sock, &clnt_addr, &clnt_addr_sz)) {
     u_long argp = 1;
     if (ioctlsocket(clnt_sock, FIONBIO, &argp) == 0) {
-      puts("session established");
+      puts(conn_alert);
       exec_chat(clnt_sock);
     }
     closesocket(clnt_sock);
