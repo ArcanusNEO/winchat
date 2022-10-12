@@ -1,1 +1,1 @@
-# wine-cmake-demo
+# simple windows chat client / server over tcp
